@@ -17,5 +17,13 @@ use App\Http\Controllers\Api\Domains\DomainsController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-
+//get all data
 Route::get('domains',[DomainsController::class,'getAllDomains']);
+
+//get single data
+Route::get('domains/{domain}',[DomainsController::class,'getByDomain']);
+
+//create domain
+Route::post('domains/add',[DomainsController::class,'createDomain']);
+
+
