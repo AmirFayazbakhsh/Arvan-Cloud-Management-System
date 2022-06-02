@@ -26,4 +26,15 @@ Route::get('domains/{domain}',[DomainsController::class,'getByDomain']);
 //create domain
 Route::post('domains/add',[DomainsController::class,'createDomain']);
 
+//delete domain
+Route::delete('domains/delete/{domain}',[DomainsController::class,'deleteDomain']);
+
+//update domain
+Route::put('domains/update/{domain}',[DomainsController::class,'updateDomain']);
+
+// Reset custom Nameserver keys to the default values for the domain
+Route::delete('reset-domain/{domain}',[DomainsController::class,'resetDomain']);
+
+
+
 
